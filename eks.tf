@@ -2,7 +2,7 @@ module "eks" {
   source          = "terraform-aws-modules/eks/aws"
   cluster_name    = "mohan-pro"
   cluster_version = "1.26"
-  subnets         = [aws_subnet.private[0].id, aws_subnet.private[1].id]
+  subnet_ids      = [aws_subnet.private[0].id, aws_subnet.private[1].id]
   vpc_id          = aws_vpc.main.id
   node_groups = {
     eks_nodes = {
