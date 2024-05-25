@@ -1,9 +1,11 @@
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
+  version         = "18.30.0"  # Specify the appropriate version here
   cluster_name    = "mohan-pro"
   cluster_version = "1.26"
   subnet_ids      = [aws_subnet.private[0].id, aws_subnet.private[1].id]
   vpc_id          = aws_vpc.main.id
+
   node_groups = {
     eks_nodes = {
       desired_capacity = 2
