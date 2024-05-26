@@ -1,1 +1,8 @@
 aws eks update-kubeconfig --name mohan-pro --region us-west-2
+Utilize Terraform to establish an EKS cluster, maintaining the codebase in GitHub. Begin by creating a VPC, comprising two public and two private subnets. The EKS cluster should be deployed within the private subnets.
+2. Following cluster setup, implement the ELB ingress controller. This component facilitates the installation of a load balancer utilizing an ingress manifest file. Refer to the following documentation for installation and testing instructions:
+ALB Ingress Controller: https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html
+LBC Helm: https://docs.aws.amazon.com/eks/latest/userguide/lbc-helm.html
+3. Proceed to create a sample nginx deployment within the 'prod' namespace using Kubernetes YAML files. Configure the service to be of type ClusterIP, and expose this service through the aforementioned load balancer using an ingress file.
+
+Upon completion, provide the load balancer URL, which should display the nginx page."
