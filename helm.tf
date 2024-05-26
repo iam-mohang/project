@@ -6,7 +6,7 @@ resource "helm_release" "alb_ingress_controller" {
 
   set {
     name  = "clusterName"
-    value = "mohan_pro"
+    value = "mohan-pro"
   }
 
   set {
