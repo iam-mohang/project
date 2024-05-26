@@ -6,7 +6,7 @@ resource "helm_release" "alb_ingress_controller" {
 
   set {
     name  = "clusterName"
-    value = module.eks.cluster_name
+    value = "mohan_pro"
   }
 
   set {
