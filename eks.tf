@@ -1,6 +1,6 @@
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
-  version         = "18.30.0"
+  version         = "20.8.4"
   cluster_name    = "mohan-pro"
   cluster_version = "1.26"
   subnet_ids      = [aws_subnet.private[0].id, aws_subnet.private[1].id]
